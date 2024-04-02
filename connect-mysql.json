@@ -1,0 +1,26 @@
+{
+  "name": "mysql-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "database.hostname": "localhost",
+    "database.port": "3306",
+    "database.user": "root",
+    "database.password": "password",
+    "database.server.id": "184054",
+    "database.include.list": "dbName",
+    "database.connectionTimeZone": "Europe/Moscow",
+    "table.include.list": "dbName.tableName",
+    "column.include.list": "dbName.tableName.columnName",
+    "topic.prefix": "mysql",
+    "topic.creation.enable": "true",
+    "topic.creation.default.replication.factor": "1",
+    "topic.creation.default.partitions": "1",
+    "schema.history.internal.kafka.bootstrap.servers": "localhost:9092",
+    "schema.history.internal.kafka.topic": "schemaHistory.dbName",
+    "include.schema.changes": "true",
+    "converters": "boolean",
+    "boolean.type": "io.debezium.connector.mysql.converters.TinyIntOneToBooleanConverter",
+    "boolean.length.checker": false,
+    "boolean.selector": "dbName.tableName.*"
+  }
+}
