@@ -9,21 +9,18 @@ sudo apt-get -y install openjdk-21-jdk postgresql-server-dev-16 libprotobuf-c-de
 ```
 wget https://repo1.maven.org/maven2/io/debezium/debezium-connector-mysql/2.5.4.Final/debezium-connector-mysql-2.5.4.Final-plugin.tar.gz \
 && tar -xzf debezium-connector-mysql-2.5.4.Final-plugin.tar.gz \
-&& cd debezium-connector-mysql-2.5.4.Final-plugin \
 && sudo cp -r debezium-connector-mysql /usr/local/share/kafka/plugins
 ```
 ###### Install Debezium postgresql connector
 ```
 wget https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.5.4.Final/debezium-connector-postgres-2.5.4.Final-plugin.tar.gz \
 && tar -xzf debezium-connector-postgres-2.5.4.Final-plugin.tar.gz \
-&& cd debezium-connector-postgres-2.5.4.Final-plugin \
 && sudo cp -r debezium-connector-postgres /usr/local/share/kafka/plugins
 ```
 ###### Install Debezium jdbc sink connector
 ```
 wget https://repo1.maven.org/maven2/io/debezium/debezium-connector-jdbc/2.5.4.Final/debezium-connector-jdbc-2.5.4.Final-plugin.tar.gz \
 && tar -xzf debezium-connector-jdbc-2.5.4.Final-plugin.tar.gz \
-&& cd debezium-connector-jdbc-2.5.4.Final-plugin \
 && sudo cp -r debezium-connector-jdbc /usr/local/share/kafka/plugins
 ```
 #### Kafka
