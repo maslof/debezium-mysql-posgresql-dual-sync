@@ -47,7 +47,7 @@ binlog_format           = ROW
 expire_logs_days        = 10
 binlog_row_image        = FULL
 ```
-Restart mysql `sudo systemctrl restart mysql`
+Restart mysql `sudo systemctl restart mysql`
 ##### Postgresql
 ###### Install PostgreSQL Decoding Plugins
 ```
@@ -70,7 +70,7 @@ max_wal_senders = 4             # max number of walsender processes (change requ
 #wal_sender_timeout = 60s       # in milliseconds; 0 disables
 max_replication_slots = 4       # max number of replication slots (change requires restart)
 ```
-Restart mysql `sudo systemctrl stop postgresql`
+Restart postgresql `sudo systemctl restart postgresql`
 
 ##### Commands for manage synchronization
 1. Start mysql connector and wait complete
