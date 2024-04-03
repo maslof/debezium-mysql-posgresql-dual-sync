@@ -81,7 +81,9 @@ curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" 
 ```
 curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" localhost:8083/connectors/ -d @sink-postgresql.json
 ```
-4. Start postgresql connector with snapshot.mode=never
+3. Restart sequnces id
+   ALTER SEQUENCE industries_id_seq RESTART WITH 1453;
+5. Start postgresql connector with snapshot.mode=never
 ```
 curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" localhost:8083/connectors/ -d @connect-postgresql.json
 ```
